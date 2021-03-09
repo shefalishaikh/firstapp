@@ -41,29 +41,28 @@ const LoginScreen = ({ navigation }) => {
     }
     return (
         <View style={StyleSheetContainer.containersign}>
-            <>
-                <TextInput style={StyleSheetContainer.signfirstname}
-                    placeholder="Enter Email"
-                    onChangeText={(value) => setUserEmail(value)}
-                    value={UserEmail}
-                    returnKeyType='next' />
-                <TextInput style={StyleSheetContainer.signfirstname}
-                    placeholder="Enter Passsword"
-                    onChangeText={(value) => setuserPassword(value)}
-                    value={userPassword}
-                    returnKeyType='go' />
-                <TouchableOpacity style={StyleSheetContainer.buttonsign}
-                    onPress={() => {
-                        // storeData();
-                        navigation.push('Login');
-                        //console.log("email====", UserEmail);
-                    }} >
-                    <Text style={StyleSheetContainer.signbtntext}>Login</Text>
-                </TouchableOpacity>
-                <Text style={StyleSheetContainer.notaccounttxt}
-                    onPress={() => navigation.navigate('signup')} >  Dont't Have an Account? Create one</Text>
-                {/* </TouchableOpacity> */}
-            </View>
+            <TextInput style={StyleSheetContainer.signfirstname}
+                placeholder="Enter Email"
+                onChangeText={(value) => setUserEmail(value)}
+                value={UserEmail}
+                returnKeyType='next' />
+            <TextInput style={StyleSheetContainer.signfirstname}
+                placeholder="Enter Passsword"
+                onChangeText={(value) => setuserPassword(value)}
+                value={userPassword}
+                returnKeyType='go' />
+            <TouchableOpacity style={StyleSheetContainer.buttonsign}
+                onPress={() => {
+                    // storeData();
+                    navigation.push('Login');
+                    //console.log("email====", UserEmail);
+                }} >
+                <Text style={StyleSheetContainer.signbtntext}>Login</Text>
+            </TouchableOpacity>
+            <Text style={StyleSheetContainer.notaccounttxt}
+                onPress={() => navigation.navigate('signup')} >  Dont't Have an Account? Create one</Text>
+            {/* </TouchableOpacity> */}
+        </View>
     )
 }
 export default LoginScreen;
