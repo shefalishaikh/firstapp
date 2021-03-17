@@ -2,6 +2,7 @@ import React from 'react'
 import { View, Text, TextInput, Alert, TouchableOpacity } from "react-native";
 
 import { useState } from "react";
+//import { Formik } from 'formik';
 import StyleSheetContainer from '../StyleSheetContainer';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -41,6 +42,7 @@ const LoginScreen = ({ navigation }) => {
     }
     return (
         <View style={StyleSheetContainer.containersign}>
+
             <TextInput style={StyleSheetContainer.signfirstname}
                 placeholder="Enter Email"
                 onChangeText={(value) => setUserEmail(value)}
